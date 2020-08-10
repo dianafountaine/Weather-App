@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Weather App</title>
+    <meta charset="UTF-8" />
+    
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="src/styles.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/c805dba8fb.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+<body>
+  <div class="container">
+    <div class="border">
+      <form class="search-form" id="search-form">
+        <div class="row">
+          <div class="col-6">
+            <input
+              type="search"
+              placeholder="Type a city.."
+              autofocus="on"
+              autocomplete="off"
+              id="city-input"
+              class="form-control shadow-sm"
+            />
+          </div>
+          <div class="col-3">
+            <input
+              type="submit"
+              value="Search"
+              class="form-control btn btn-primary shadow-sm w-100"
+            />
+          </div>
+          <div class="col-3">
+            <button
+              class="btn btn-success w-100"
+              id="current-location-button"
+            >
+              Current
+            </button>
+          </div>
+        </div>
+      </form>
+            <div class="row"><div class="col-3">
+              <ul>
+                    <li id="date"></li>
+                    <li id="city"></li>
+                    <li ><span id="temperature"></span>°F 
+                      </li>
+                      <li><span id="condition"></span></li>
+                      <li>Humidity:<span id="humidity"></span>%</li>
+                    
+                    <li>Wind:<span id= "wind"></span> MPH</li>
+                      </ul>
+                </div>
+                <div class="col-3">
+                <ul>
+                <li><em>Forecast</em></li>
+                <li>Mon 93°</li>
+                <li>Tue 94°</li>
+                <li>Wed 97°</li>
+                <li>Thu 95°</li>
+                <li>Fri 94°</li>
+                <li>Sat 95°</li>
+                </ul>
+      </div>
+      <script src="src/script.js"></script>
+    </body>
+</html>
