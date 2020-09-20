@@ -50,7 +50,7 @@ body {
   }
   .border {
     background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
-    margin: 10px auto;
+    margin: 100px auto;
     padding: 10px;
   }
   .ftemp {
