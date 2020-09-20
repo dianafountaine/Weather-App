@@ -32,7 +32,12 @@ function FormatDate(date) {
     document.querySelector("#wind").innerHTML = Math.round(
       response.data.wind.speed
     );
-    document.querySelector("src").innerHTML = `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    document.setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+    document.setAttribute("alt", response.data.weather[0].description);
+  }
   }
   
   
