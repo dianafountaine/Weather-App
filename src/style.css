@@ -49,6 +49,7 @@ body {
     list-style: none;
   }
   .border {
+    border-style: none;
     margin: 50px 100px;
     padding: 10px;
   }
