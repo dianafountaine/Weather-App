@@ -32,7 +32,7 @@ function FormatDate(date) {
     document.querySelector("#wind").innerHTML = Math.round(
       response.data.wind.speed
     );
-    document.setAttribute("src").innerHTML =response.data.weather.icon;
+    document.setAttribute("src", `http://openweatherapp.org/img/wn/${response.data.weather{[0].icon}@2x.png`
   }
   
   function searchCity(city) {
