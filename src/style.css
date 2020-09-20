@@ -57,4 +57,6 @@ body {
     font-size: 24px;
     text-align: left;
   }
-  
+  .weather-icon{
+    margin-left: 25px;
+  }
