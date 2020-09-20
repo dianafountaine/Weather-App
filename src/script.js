@@ -37,7 +37,7 @@ function FormatDate(date) {
       `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
     document.setAttribute("alt", response.data.weather[0].description);
-  }
+  
   }
   
   
