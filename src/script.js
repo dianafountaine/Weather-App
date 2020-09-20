@@ -32,6 +32,7 @@ function FormatDate(date) {
     document.querySelector("#wind").innerHTML = Math.round(
       response.data.wind.speed
     );
+    document.querySelector("icon").innerHTML =response.data.weather.icon;
   }
   
   function searchCity(city) {
