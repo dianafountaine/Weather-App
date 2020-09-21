@@ -103,10 +103,10 @@ function FormatDate(date) {
   currentLocationButton.addEventListener("click", getCurrentLocation);
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+fahrenheitLink.addEventListener("click", convertTofahrenheit);
 
 let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", displayCelsiusTemperature);
+celsiusLink.addEventListener("click", convertTofahrenheit);
 
   
   searchCity("Sacramento");
