@@ -76,8 +76,8 @@ function FormatDate(date) {
   
     fahrenheitLink.classList.remove("active");
     celsiusLink.classList.add("active");
-    let fahrenheiTemperature = (fahrenheitTemperature -32)* 5/9;
-    temperatureElement.innerHTML = Math.round(fahrenheiTemperature);
+    let celsiusTemperature = (fahrenheitTemperature -32)* 5/9;
+    temperatureElement.innerHTML = Math.round(celsiusTemperature);
   }
   
   function displayFahrenheitTemperature(event) {
