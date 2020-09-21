@@ -89,8 +89,6 @@ function FormatDate(date) {
   }
   
   
-  let fahrenheitTemperature = null;
-  
   // feature 1
   let dateElement = document.querySelector("#date");
   let currentTime = new Date();
