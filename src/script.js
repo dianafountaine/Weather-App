@@ -70,29 +70,29 @@ function FormatDate(date) {
     navigator.geolocation.getCurrentPosition(searchLocation);
   }
   
-  function convertoToCelsius(event) {
+  function displayCelsiusTemperature(event) {
     event.preventDefault();
+    let temperatureElement = document.querySelector("#temperature");
+  
     fahrenheitLink.classList.remove("active");
     celsiusLink.classList.add("active");
-    let celsiusTemperature = (fahrenheitTemperature -32)* 5/9;
-    let temperatureElement = document.querySelector("#temperature");
-    
+    let fahrenheitTemperature =  Math.round(
+      response.data.main.temp);
+    let celsiusTemperature = (fahrenheitTemperature - 32) * 5/9;
     temperatureElement.innerHTML = Math.round(celsiusTemperature);
   }
   
-  function convertToFahrenheit(event) {
+  function displayfahrenheitTemperature(event) {
     event.preventDefault();
-    fahrenheitLink.classList.remove("active");
-    celsiusLink.classList.add("active");
+    fahrenheitLink.classList.add("active");
+    celsiusLink.classList.remove("active");
     let temperatureElement = document.querySelector("#temperature");
-    let fahrenheitTemperature = Math.round(
-      response.data.wind.speed);
-
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature)
-
+    temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
   }
   
-  let fahrenheitLink = null;
+  let fahrenheitTemperature = null;
+  
+ 
   // feature 1
   let dateElement = document.querySelector("#date");
   let currentTime = new Date();
@@ -104,11 +104,12 @@ function FormatDate(date) {
   let currentLocationButton = document.querySelector("#current-location-button");
   currentLocationButton.addEventListener("click", getCurrentLocation);
 
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", convertToFahrenheit);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", convertoToCelsius);
+  let fahrenheitLink = document.querySelector("#fahrenheit-link");
+  fahrenheitLink.addEventListener("click", displayfahrenheitTemperature);
+  
+  let celsiusLink = document.querySelector("#celsius-link");
+  celsiusLink.addEventListener("click", displayCelsiusTemperature);
+  
 
   
   searchCity("Sacramento");
