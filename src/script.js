@@ -70,23 +70,20 @@ function FormatDate(date) {
     navigator.geolocation.getCurrentPosition(searchLocation);
   }
   
-  function displayCelsiusTemperature(event) {
+  function convertoTocelsius(event) {
     event.preventDefault();
     let temperatureElement = document.querySelector("#temperature");
-  
-    fahrenheitLink.classList.remove("active");
-    celsiusLink.classList.add("active");
     let celsiusTemperature = (fahrenheitTemperature -32)* 5/9;
     temperatureElement.innerHTML = Math.round(celsiusTemperature);
   }
   
-  function displayFahrenheitTemperature(event) {
+  function convertTofahrenheit(event) {
     event.preventDefault();
-    celsiusLink.classList.add("active");
-    fahrenheitLink.classList.remove("active");
     let temperatureElement = document.querySelector("#temperature");
-    temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+  
+    temperatureElement.innerHTML = Math.round(fahrenheitTemperature) ;
   }
+  
   
   let fahrenheitTemperature = null;
   
