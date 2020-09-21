@@ -87,12 +87,12 @@ function FormatDate(date) {
     let temperatureElement = document.querySelector("#temperature");
     let fahrenheitTemperature = Math.round(
       response.data.wind.speed);
-      
+
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature)
 
   }
   
-  
+  let fahrenheitLink = null;
   // feature 1
   let dateElement = document.querySelector("#date");
   let currentTime = new Date();
