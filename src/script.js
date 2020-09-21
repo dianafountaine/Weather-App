@@ -70,17 +70,25 @@ function FormatDate(date) {
     navigator.geolocation.getCurrentPosition(searchLocation);
   }
   
-  function convertTofahrenheit(event) {
+  function displayCelsiusTemperature(event) {
     event.preventDefault();
     let temperatureElement = document.querySelector("#temperature");
   
-    temperatureElement.innerHTML = 66;
+    celsiusLink.classList.remove("active");
+    fahrenheitLink.classList.add("active");
+    let fahrenheiTemperature = (fahrenheitTemperature -32)* 5/9;
+    temperatureElement.innerHTML = Math.round(fahrenheiTemperature);
   }
-  function convertoTocelsius(event) {
+  
+  function displayFahrenheitTemperature(event) {
     event.preventDefault();
+    celsiusLink.classList.add("active");
+    fahrenheitLink.classList.remove("active");
     let temperatureElement = document.querySelector("#temperature");
-    temperatureElement.innerHTML = 19;
+    temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
   }
+  
+  let fahrenheitTemperature = null;
   
   // feature 1
   let dateElement = document.querySelector("#date");
@@ -92,5 +100,12 @@ function FormatDate(date) {
   
   let currentLocationButton = document.querySelector("#current-location-button");
   currentLocationButton.addEventListener("click", getCurrentLocation);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
   
   searchCity("Sacramento");
