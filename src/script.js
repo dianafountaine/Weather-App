@@ -70,7 +70,7 @@ function FormatDate(date) {
     navigator.geolocation.getCurrentPosition(searchLocation);
   }
   
-  function convertoTocelsius(event) {
+  function convertoToCelsius(event) {
     event.preventDefault();
     fahrenheitLink.classList.remove("active");
     celsiusLink.classList.add("active");
@@ -79,7 +79,7 @@ function FormatDate(date) {
     temperatureElement.innerHTML = Math.round(celsiusTemperature);
   }
   
-  function convertTofahrenheit(event) {
+  function convertToFahrenheit(event) {
     event.preventDefault();
     fahrenheitLink.classList.remove("active");
     celsiusLink.classList.add("active");
@@ -106,7 +106,7 @@ let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertTofahrenheit);
 
 let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", convertTofahrenheit);
+celsiusLink.addEventListener("click", convertoToCelsius);
 
   
   searchCity("Sacramento");
