@@ -82,7 +82,7 @@ function FormatDate(date) {
     temperatureElement.innerHTML = Math.round(celsiusTemperature);
   }
   
-  function displayfahrenheitTemperature(event) {
+  function displayFahrenheitTemperature(event) {
     event.preventDefault();
     fahrenheitLink.classList.add("active");
     celsiusLink.classList.remove("active");
@@ -105,7 +105,7 @@ function FormatDate(date) {
   currentLocationButton.addEventListener("click", getCurrentLocation);
 
   let fahrenheitLink = document.querySelector("#fahrenheit-link");
-  fahrenheitLink.addEventListener("click", displayfahrenheitTemperature);
+  fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
   
   let celsiusLink = document.querySelector("#celsius-link");
   celsiusLink.addEventListener("click", displayCelsiusTemperature);
