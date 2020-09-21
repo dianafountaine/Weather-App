@@ -85,7 +85,8 @@ function FormatDate(date) {
     celsiusLink.classList.add("active");
     let temperatureElement = document.querySelector("#temperature");
   
-    temperatureElement.innerHTML = Math.round(fahrenheitTemperature) ;
+    temperatureElement.innerHTML = Math.round(
+      response.data.wind.speed);
   }
   
   
