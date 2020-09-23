@@ -23,7 +23,9 @@ function FormatDate(date) {
 
 function displayWeatherCondition(response) {
   let iconElement = document.querySelector("#icon");
+  
   let fahrenheitTemperature = response.data.main.temp;
+  
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(fahrenheitTemperature);
 
@@ -75,7 +77,7 @@ function convertToCelsius(event){
   let temperatureElement = document.querySelector("#temperature")
   celsiusLink.classList.add("active");
   fahrenheitLink.classList.remove("active");
-  let celsiusTemperature = ((fahrenheitTemperature-32)*5/9);
+  let celsiusTemperature = Math.abs((fahrenheitTemperature-32)*5/9);
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
   
 }
@@ -107,8 +109,5 @@ celsiusLink.addEventListener("click", convertToCelsius);
 
 let fahrenheitLink = document.querySelector("#fahrenheitlink");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
-
-
-
 
 searchCity("Sacramento");
